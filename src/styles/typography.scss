@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.07rem;
+  line-height: 1.4;
+  color: $color-black;
+
+  @media screen and(min-width: 850px) {
+    font-size: 1.9rem;
+  }
+}
+
+p {
+  text-indent: 2rem;
+  color: $color-grey;
+}

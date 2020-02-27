@@ -1,0 +1,45 @@
+@import "../../../../styles/variables.scss";
+
+.home-hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &__img-wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__img-placeholder {
+    opacity: 0 !important;
+  }
+
+  &__img-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__container {
+  }
+
+  &__heading {
+    color: $color-white;
+    font-size: 6.5rem;
+    font-weight: 200;
+    margin-bottom: 7rem;
+  }
+
+  &__sub-heading {
+    color: $color-white;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+}

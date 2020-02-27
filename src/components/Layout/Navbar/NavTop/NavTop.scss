@@ -1,0 +1,38 @@
+@import "../../../../styles/variables.scss";
+
+.nav-top {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 7rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+  }
+
+  &__ul {
+    list-style: none;
+    display: flex;
+    float: right;
+  }
+
+  &__li {
+    color: $color-white;
+    margin-right: 3rem;
+    font-weight: 400;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+  }
+}
