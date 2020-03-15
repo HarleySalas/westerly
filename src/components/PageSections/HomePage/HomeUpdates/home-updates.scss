@@ -1,0 +1,56 @@
+@import "../../../../styles/variables.scss";
+
+.home-updates {
+  margin: 3rem 3rem;
+  background-color: $color-white-dark;
+  padding: 5rem 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.24rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    // font-size: 2rem;
+    letter-spacing: 0.11rem;
+    color: $color-primary-light;
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    display: flex;
+
+    &__input {
+      display: block;
+      margin-right: 1rem;
+      padding: 0 2rem;
+      color: $color-primary;
+      font-size: 1.5rem;
+      font-weight: 500;
+      border: 1px solid $color-grey-dark;
+      background-color: $color-white !important;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $color-grey-dark;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.11rem;
+      }
+    }
+  }
+}

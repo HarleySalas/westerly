@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import { Parallax } from "react-scroll-parallax";
 import "./home-hero.scss";
+
+import Button from "../../../Button/Button";
 
 const HomeHero = () => {
   const data = useStaticQuery(graphql`
     query homeHeroImg {
-      image: file(
-        relativePath: { eq: "hero-images/architecture-home-hero.jpg" }
-      ) {
+      image: file(relativePath: { eq: "hero-images/hero-img.jpg" }) {
         id
         childImageSharp {
           fluid(quality: 100) {
@@ -21,26 +22,33 @@ const HomeHero = () => {
 
   return (
     <header className="home-hero">
-      <Img
-        fluid={data.image.childImageSharp.fluid}
-        fadeIn={true}
-        durationFadeIn={1000}
-        draggable={false}
-        alt="Architecture Example"
-        className="home-hero__img-wrapper"
-        imgStyle={{
-          userSelect: "none",
-        }}
-        backgroundColor="#0e1113"
-        placeholderClassName="home-hero__img-placeholder"
-      />
-      <div className="home-hero__img-overlay">
-        <div className="container home-hero__container">
-          <h1 className="home-hero__heading">Gatsby Starter</h1>
-          <span className="home-hero__sub-heading">
-            This template is preconfigured with Netlify CMS,
-            <br /> Redux and base sass styles.
-          </span>
+      <div className="home-hero__wrapper">
+        <Parallax y={[-15, 15]}>
+          <Img
+            fluid={data.image.childImageSharp.fluid}
+            fadeIn={true}
+            durationFadeIn={1000}
+            draggable={false}
+            // alt="Architecture Example"
+            className="home-hero__img-wrapper"
+            imgStyle={{
+              userSelect: "none",
+            }}
+            backgroundColor="#29382a"
+            // placeholderClassName="home-hero__img-placeholder"
+          />
+        </Parallax>
+        <div className="home-hero__img-overlay">
+          <div className="container home-hero__container">
+            <h1 className="home-hero__heading">
+              We Look Forward to Building With You
+            </h1>
+            <Button
+              btnText="View Projects"
+              btnStyle="primary"
+              linkTo="/projects"
+            />
+          </div>
         </div>
       </div>
     </header>

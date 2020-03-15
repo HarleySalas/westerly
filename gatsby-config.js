@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Template`,
-    description: `Gatsby configured with Redux, Netlify CMS and SASS with base styles`,
-    author: `@gatsbyjs`,
+    title: `Westerly Design + Build`,
+    description: `Premier Design + Build Firm, located in Edmonds, WA.`,
+    author: `@HarleySalas`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

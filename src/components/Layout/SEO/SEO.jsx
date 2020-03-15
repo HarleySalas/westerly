@@ -63,6 +63,10 @@ function SEO({ description, lang, meta, title }) {
         href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700&display=swap"
+        rel="stylesheet"
+      ></link>
     </Helmet>
   );
 }
