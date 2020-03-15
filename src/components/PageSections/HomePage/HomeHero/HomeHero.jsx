@@ -12,7 +12,7 @@ const HomeHero = () => {
       image: file(relativePath: { eq: "hero-images/hero-img.jpg" }) {
         id
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -29,6 +29,7 @@ const HomeHero = () => {
             fadeIn={true}
             durationFadeIn={1000}
             draggable={false}
+            loading="eager"
             // alt="Architecture Example"
             className="home-hero__img-wrapper"
             imgStyle={{
